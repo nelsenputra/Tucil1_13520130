@@ -1,0 +1,7 @@
+Maximum reward: 49
+Buffer: 1C E9 1C BD BD
+Coordinates of each token: 
+(0, 0) 1C
+(1, 0) 1C
+(2, 0) BD
+Execution time: 0.612 ms
