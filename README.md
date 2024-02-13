@@ -21,7 +21,7 @@ Hello, everyone! Welcome to my GitHub Repository!
 This project was created by:
 | Name | Student ID | Class |
 | :---: | :---: | :---: |
-| Nelsen Putra | 13520130 | IF2211-01
+| Nelsen Putra | 13520130 | IF2211-02
 
 
 ## General Information
@@ -94,7 +94,7 @@ All the specifications were implemented.
 
 
 ## Acknowledgements
-- This project was based on [Spesifikasi Tugas Kecil 1 Stima](https://informatika.stei.itb.ac.id/~rinaldi.munir/Stmik/2023-2024/Tucil1-2024.pdf)
+- This project was based on [Spesifikasi Tugas Kecil 1 IF2211 Strategi Algoritma](https://informatika.stei.itb.ac.id/~rinaldi.munir/Stmik/2023-2024/Tucil1-2024.pdf)
 - Thanks to God
 - Thanks to Mrs. Masayu Leylia Khodra, Mrs. Nur Ulfa Maulidevi, and Mr. Rinaldi as our lecturers
 - Thanks to academic assistants
