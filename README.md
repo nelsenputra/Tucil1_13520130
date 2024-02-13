@@ -103,6 +103,7 @@ All the specifications were implemented.
 
 ## Library
 - [time](https://www.tutorialspoint.com/c_standard_library/time_h.htm)
+- [os](https://docs.python.org/3/library/os.html)
 - [pyfiglet](https://pypi.org/project/pyfiglet/)
 - [colorama](https://pypi.org/project/colorama/)
 - [random](https://www.w3schools.com/python/module_random.asp)

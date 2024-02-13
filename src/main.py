@@ -1,10 +1,14 @@
 import time
+import os
 import pyfiglet
 from colorama import Fore, Style
 from randomizer import randomize
 
-def readFile(filename):
-  with open(filename, 'r') as file:
+def readFile(fileName):
+  currentDir = os.path.dirname(__file__)
+  testDir = os.path.join(currentDir, '../test')
+  filePath = os.path.join(testDir, fileName)
+  with open(filePath, 'r') as file:
     lines = file.readlines()
     bufferSize = int(lines[0])
     m, n = map(int, lines[1].split()) # Matrix weight, matrix height
@@ -343,10 +347,10 @@ def displayGrid(matrix):
   for row in matrix:
     print(" ".join(row))
 
-def saveToFile(filename, maxReward, maxBuffer, coordinates, matrix, execTime, overload):
+def saveToFile(fileName, maxReward, maxBuffer, coordinates, matrix, execTime, overload):
   writtenCoordinates = set()
 
-  with open(filename, 'w') as file:
+  with open(fileName, 'w') as file:
     file.write("Maximum reward: {}\n".format(maxReward))
     file.write("Buffer: {}\n".format(maxBuffer))
     file.write("Coordinates of each token: \n")
@@ -374,8 +378,8 @@ def main():
   option = input("\nChoose method (1/2): ")
 
   if (option == "1"):
-    filename = input("\nInsert file name: ")
-    bufferSize, m, n, matrix, sequencesAndRewards = readFile(filename)
+    fileName = input("\nInsert file name: ")
+    bufferSize, m, n, matrix, sequencesAndRewards = readFile(fileName)
     sortedSequences = sorted(sequencesAndRewards.items(), key=lambda x: x[1], reverse=True)
   elif (option == "2"):
     bufferSize, m, n, matrix, sequencesAndRewards = randomize()
@@ -414,9 +418,9 @@ def main():
   print(">> Do you want to keep the solution? (Y/N)")
   save = input()
   if (save == "Y"):
-    filename = input("\nInsert file name to save (.txt): ")
+    fileName = input("\nInsert file name to save (.txt): ")
     print(Fore.GREEN + "\nThe solution has been successfully saved!\n" + Style.RESET_ALL)
-    saveToFile(filename, maxReward, maxBuffer, coordinates, matrix, execTime, overload)
+    saveToFile(fileName, maxReward, maxBuffer, coordinates, matrix, execTime, overload)
   else:
     print(Fore.CYAN + "\nThank you!\n" + Style.RESET_ALL)
   
